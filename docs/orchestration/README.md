@@ -4,7 +4,7 @@ Un blueprint documentaire pour coordonner des agents et outils existants, avec e
 
 ## État du projet
 
-Ce paquet contient une spécification et un registre de travaux. Il ne contient pas d’orchestrateur exécutable, de service déployé, de moteur vocal ni de clips audio. Les tâches décrivent une cible à réaliser et à tester ; leur présence ne prouve pas leur réalisation. Ce complément est préparé pour le dépôt public existant `unified-agent-gateway`. Sa publication effective doit être confirmée séparément.
+Ce paquet contient une spécification et un registre de travaux. Il ne contient pas d’orchestrateur exécutable, de service déployé, de moteur vocal ni de clips audio. Les tâches décrivent une cible à réaliser et à tester ; leur présence ne prouve pas leur réalisation. La version documentaire initiale est publiée sur la branche `docs/orchestration-blueprint-20261001` du dépôt public `unified-agent-gateway`, au [commit `75a8dca`](https://github.com/fvegiard/unified-agent-gateway/commit/75a8dcab125286e8dcf9e0db35cee4bd385ab2c3). Les quatre fichiers de cette publication ont été relus octet par octet. Cette confirmation concerne la publication documentaire ; elle ne valide pas un runtime ni les critères d’intégration.
 
 ## Relation avec la recherche existante
 

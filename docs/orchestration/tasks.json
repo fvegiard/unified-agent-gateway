@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "kind": "public_planning_blueprint_not_runtime",
-  "publication_status": "prepared_for_existing_public_repository_not_published",
+  "publication_status": "initial_documentation_published_and_read_back",
   "deployment_status": "not_claimed",
   "license_status": "not_assigned",
   "tasks": [
@@ -9,50 +9,65 @@
       "id": "R01",
       "title": "Versionner la spécification",
       "priority": "P0",
-      "status": "a_evaluer",
+      "status": "verifie_partiellement",
       "owner_role_proposed": "coordination livraison",
       "executor": null,
       "dependencies": [],
-      "next_action": "Inventorier les documents et travaux équivalents",
+      "next_action": "Vérifier les liens rendus",
       "acceptance": "Document versionné, relu, accessible et sans duplication inutile",
-      "evidence": null,
+      "evidence": {
+        "url": "https://github.com/fvegiard/unified-agent-gateway/commit/75a8dcab125286e8dcf9e0db35cee4bd385ab2c3",
+        "scope": "Branche documentaire publiée ; quatre fichiers relus octet par octet. La vérification des liens rendus ne fait pas partie de ce reçu."
+      },
       "last_verified_at": null,
       "subtasks": [
         {
           "id": "R01.1",
           "description": "Inventorier les documents et travaux équivalents",
-          "status": "a_evaluer",
+          "status": "accepte",
           "owner_ref": "R01",
           "acceptance_ref": "R01",
           "executor": null,
-          "evidence": null
+          "evidence": {
+            "url": "https://github.com/fvegiard/unified-agent-gateway/commit/75a8dcab125286e8dcf9e0db35cee4bd385ab2c3",
+            "scope": "Documentation existante comparée avant ajout ; la recherche de passerelles reste référencée plutôt que dupliquée."
+          }
         },
         {
           "id": "R01.2",
           "description": "Définir une branche documentaire et une revue",
-          "status": "a_evaluer",
+          "status": "accepte",
           "owner_ref": "R01",
           "acceptance_ref": "R01",
           "executor": null,
-          "evidence": null
+          "evidence": {
+            "url": "https://github.com/fvegiard/unified-agent-gateway/commit/75a8dcab125286e8dcf9e0db35cee4bd385ab2c3",
+            "scope": "Branche documentaire créée et contenu relu."
+          }
         },
         {
           "id": "R01.3",
           "description": "Publier seulement les données autorisées",
-          "status": "a_evaluer",
+          "status": "accepte",
           "owner_ref": "R01",
           "acceptance_ref": "R01",
           "executor": null,
-          "evidence": null
+          "evidence": {
+            "url": "https://github.com/fvegiard/unified-agent-gateway/commit/75a8dcab125286e8dcf9e0db35cee4bd385ab2c3",
+            "scope": "Publication documentaire publique confirmée au commit référencé après revue de son périmètre."
+          }
         },
         {
           "id": "R01.4",
           "description": "Relire le contenu publié et vérifier les liens",
-          "status": "a_evaluer",
+          "status": "verifie_partiellement",
           "owner_ref": "R01",
           "acceptance_ref": "R01",
           "executor": null,
-          "evidence": null
+          "evidence": {
+            "url": "https://github.com/fvegiard/unified-agent-gateway/commit/75a8dcab125286e8dcf9e0db35cee4bd385ab2c3",
+            "scope": "Quatre fichiers relus octet par octet ; liens rendus encore à vérifier dans cette mise à jour."
+          }
         }
       ]
     },
@@ -1224,5 +1239,12 @@
         }
       ]
     }
-  ]
+  ],
+  "publication_evidence": {
+    "commit": "75a8dcab125286e8dcf9e0db35cee4bd385ab2c3",
+    "url": "https://github.com/fvegiard/unified-agent-gateway/commit/75a8dcab125286e8dcf9e0db35cee4bd385ab2c3",
+    "branch": "docs/orchestration-blueprint-20261001",
+    "scope": "Initial documentary publication; four files read back byte-for-byte.",
+    "runtime_acceptance": false
+  }
 }

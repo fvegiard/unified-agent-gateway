@@ -32,7 +32,7 @@ Les transports possibles doivent être évalués sur la cible : appels d’outil
 
 ## 4. États et preuves
 
-Le registre public commence à l’état `a_evaluer`. Ce statut ne décrit pas l’inventaire d’une installation privée. Chaque tâche possède un rôle responsable proposé, des dépendances, une prochaine action et un critère d’acceptation. Les champs `executor`, `evidence` et `last_verified_at` restent nuls tant qu’aucune preuve publique pertinente ne les établit.
+Les tâches commencent à l’état `a_evaluer` et évoluent uniquement selon des preuves délimitées. R01 reflète désormais la publication documentaire confirmée ; les acceptations runtime restent ouvertes. Ces statuts ne décrivent pas l’inventaire d’une installation privée. Chaque tâche possède un rôle responsable proposé, des dépendances, une prochaine action et un critère d’acceptation. Les champs `executor`, `evidence` et `last_verified_at` restent nuls tant qu’aucune preuve publique pertinente ne les établit.
 
 États possibles : `a_evaluer`, `documente`, `pret`, `en_cours`, `verifie_partiellement`, `bloque`, `accepte`, `remplace`, `annule`.
 
@@ -44,12 +44,14 @@ Le fichier [tasks.json](tasks.json) est la version structurée des volets ci-des
 
 ### R01 — Versionner la spécification
 
-Priorité : P0. Rôle proposé : coordination livraison. Dépendances : aucune. État : à évaluer.
+Priorité : P0. Rôle proposé : coordination livraison. Dépendances : aucune. État : vérifié partiellement.
 
 - R01.1 : Inventorier les documents et travaux équivalents
 - R01.2 : Définir une branche documentaire et une revue
 - R01.3 : Publier seulement les données autorisées
 - R01.4 : Relire le contenu publié et vérifier les liens
+
+Preuve : [publication documentaire au commit `75a8dca`](https://github.com/fvegiard/unified-agent-gateway/commit/75a8dcab125286e8dcf9e0db35cee4bd385ab2c3), sur la branche `docs/orchestration-blueprint-20261001` ; quatre fichiers relus octet par octet. R01.1 à R01.3 sont acceptées dans leur périmètre documentaire. R01.4 reste partielle : la relecture du contenu est confirmée, les liens rendus restent à vérifier.
 
 Acceptation : Document versionné, relu, accessible et sans duplication inutile.
 
