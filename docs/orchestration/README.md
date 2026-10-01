@@ -21,6 +21,7 @@ La priorité est de réutiliser une solution maintenue plutôt que créer un nou
 - [Exigences et critères d’acceptation](requirements.md)
 - [Registre structuré des tâches](tasks.json)
 - [Carte des connexions : preuve limitée et cible proposée](architecture-map.md)
+- [Terminal live : composant existant et critères de lecture seule](terminal-reuse.md)
 
 ## Méthode
 

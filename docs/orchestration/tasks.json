@@ -813,7 +813,7 @@
       "id": "R15",
       "title": "Construire une carte vérifiable",
       "priority": "P1",
-      "status": "a_evaluer",
+      "status": "verifie_partiellement",
       "owner_role_proposed": "interface",
       "executor": null,
       "dependencies": [
@@ -821,55 +821,74 @@
         "R09",
         "R10"
       ],
-      "next_action": "Choisir graphe, canvas ou Kanban selon usage",
+      "next_action": "Relier les états aux événements réels puis compléter les contrôles mobile, clavier et niveaux de gris",
       "acceptance": "Chaque connexion possède une preuve ou est explicitement proposée ; aucune fausse indication live",
-      "evidence": null,
+      "evidence": {
+        "url": "https://github.com/fvegiard/unified-agent-gateway/blob/a67df466b4080326154040f4f3ab64ee77a8598f/docs/orchestration/architecture-map.md",
+        "scope": "Carte publiée : trois diagrammes Mermaid inspectés visuellement dans un navigateur cloud ; liens normaux et relecture exacte du source contrôlés.",
+        "limitations": "Représentation historique limitée et architecture cible proposée ; ni carte exhaustive ni télémétrie live. Contrôles mobile, clavier et niveaux de gris incomplets."
+      },
       "last_verified_at": null,
       "subtasks": [
         {
           "id": "R15.1",
           "description": "Choisir graphe, canvas ou Kanban selon usage",
-          "status": "a_evaluer",
+          "status": "accepte",
           "owner_ref": "R15",
           "acceptance_ref": "R15",
           "executor": null,
-          "evidence": null
+          "evidence": {
+            "url": "https://github.com/fvegiard/unified-agent-gateway/blob/a67df466b4080326154040f4f3ab64ee77a8598f/docs/orchestration/architecture-map.md",
+            "scope": "Mermaid retenu pour les trois diagrammes publiés et inspectés visuellement."
+          }
         },
         {
           "id": "R15.2",
           "description": "Afficher composants, connexions et dépendances",
-          "status": "a_evaluer",
+          "status": "verifie_partiellement",
           "owner_ref": "R15",
           "acceptance_ref": "R15",
           "executor": null,
-          "evidence": null
+          "evidence": {
+            "url": "https://github.com/fvegiard/unified-agent-gateway/blob/a67df466b4080326154040f4f3ab64ee77a8598f/docs/orchestration/architecture-map.md",
+            "scope": "Composants, connexions et dépendances représentés dans une carte historique limitée et une cible proposée ; couverture non exhaustive."
+          }
         },
         {
           "id": "R15.3",
           "description": "Brancher les états aux événements observés",
-          "status": "a_evaluer",
+          "status": "documente",
           "owner_ref": "R15",
           "acceptance_ref": "R15",
           "executor": null,
-          "evidence": null
+          "evidence": {
+            "url": "https://github.com/fvegiard/unified-agent-gateway/blob/a67df466b4080326154040f4f3ab64ee77a8598f/docs/orchestration/architecture-map.md",
+            "scope": "Aucun branchement des états aux événements réels ni télémétrie live dans cette carte documentaire."
+          }
         },
         {
           "id": "R15.4",
           "description": "Marquer données périmées, inconnues ou déconnectées",
-          "status": "a_evaluer",
+          "status": "verifie_partiellement",
           "owner_ref": "R15",
           "acceptance_ref": "R15",
           "executor": null,
-          "evidence": null
+          "evidence": {
+            "url": "https://github.com/fvegiard/unified-agent-gateway/blob/a67df466b4080326154040f4f3ab64ee77a8598f/docs/orchestration/architecture-map.md",
+            "scope": "Une légende distingue les états de preuve et les éléments proposés ; aucune détection automatique de péremption ou de déconnexion."
+          }
         },
         {
           "id": "R15.5",
           "description": "Tester lisibilité, accessibilité et interactions",
-          "status": "a_evaluer",
+          "status": "verifie_partiellement",
           "owner_ref": "R15",
           "acceptance_ref": "R15",
           "executor": null,
-          "evidence": null
+          "evidence": {
+            "url": "https://github.com/fvegiard/unified-agent-gateway/blob/a67df466b4080326154040f4f3ab64ee77a8598f/docs/orchestration/architecture-map.md",
+            "scope": "Trois diagrammes inspectés visuellement dans un navigateur cloud et liens normaux contrôlés ; contrôles mobile, clavier et niveaux de gris incomplets."
+          }
         }
       ]
     },

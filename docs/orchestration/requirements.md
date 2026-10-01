@@ -32,7 +32,7 @@ Les transports possibles doivent être évalués sur la cible : appels d’outil
 
 ## 4. États et preuves
 
-Les tâches commencent à l’état `a_evaluer` et évoluent uniquement selon des preuves délimitées. R01 reflète désormais la publication documentaire confirmée ; les acceptations runtime restent ouvertes. Ces statuts ne décrivent pas l’inventaire d’une installation privée. Chaque tâche possède un rôle responsable proposé, des dépendances, une prochaine action et un critère d’acceptation. Les champs `executor`, `evidence` et `last_verified_at` restent nuls tant qu’aucune preuve publique pertinente ne les établit.
+Les tâches commencent à l’état `a_evaluer` et évoluent uniquement selon des preuves délimitées. R01 reflète la publication documentaire confirmée et R15 la carte partiellement vérifiée ; les acceptations runtime restent ouvertes. Ces statuts ne décrivent pas l’inventaire d’une installation privée. Chaque tâche possède un rôle responsable proposé, des dépendances, une prochaine action et un critère d’acceptation. Les champs `executor`, `evidence` et `last_verified_at` restent nuls tant qu’aucune preuve publique pertinente ne les établit.
 
 États possibles : `a_evaluer`, `documente`, `pret`, `en_cours`, `verifie_partiellement`, `bloque`, `accepte`, `remplace`, `annule`.
 
