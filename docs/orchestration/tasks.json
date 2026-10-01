@@ -896,16 +896,19 @@
       "id": "R16",
       "title": "Présenter un terminal lecture seule",
       "priority": "P1",
-      "status": "a_evaluer",
+      "status": "documente",
       "owner_role_proposed": "interface et sécurité",
       "executor": null,
       "dependencies": [
         "R08",
         "R10"
       ],
-      "next_action": "Comparer composants de terminal maintenus",
+      "next_action": "Vérifier un hôte PTY autorisé et le chemin de connexion privée avant tout nouvel essai runtime",
       "acceptance": "Flux réel privé et lecture seule dans la surface retenue, sans confondre image et terminal",
-      "evidence": null,
+      "evidence": {
+        "url": "https://github.com/fvegiard/unified-agent-gateway/blob/a390764b97f7832e2bd6beb82d90a7cc43d0a156/docs/orchestration/terminal-reuse.md",
+        "scope": "Comparaison de composants et protections documentée et relue. Aucun terminal inline livré ; essai navigateur bloqué avant démarrage."
+      },
       "last_verified_at": null,
       "subtasks": [
         {

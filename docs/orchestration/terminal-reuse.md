@@ -129,6 +129,8 @@ Un essai séparé basé sur **ttyd 1.7.7** et **tmux 3.5a** a été préparé à
 
 Aucun serveur, processus résiduel, listener ou accès public n’a été créé. Les tests d’affichage navigateur, de refus des entrées, de redimensionnement et de reconnexion sont **NON EXÉCUTÉS**. Cet essai ne fournit donc aucune URL active ni preuve de lecture seule en fonctionnement.
 
+Le [reçu public borné](terminal-cloud-check.json) conserve les versions, sources, hachages et contrôles effectués, sans chemins de machine ni données privées.
+
 Même si ses essais réussissent, il validera une observation live dans un navigateur. Il ne validera pas le rendu inline MCP Apps demandé pour R16.
 
 **Bilan : recherche et plan vérifiés; adaptation, installation, exécution, connexion privée et validation inline restent à effectuer dans leur périmètre autorisé.**

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "scope": "Bounded cloud terminal preflight; not inline-widget acceptance",
+  "date": "2026-10-01",
+  "result": "BLOCKED_BEFORE_SERVER_START",
+  "packages": [
+    {
+      "name": "tmux",
+      "version": "3.5a-3",
+      "source": "https://deb.debian.org/debian/pool/main/t/tmux/tmux_3.5a-3_amd64.deb",
+      "sha256": "e6b6aa51780044e2c4a0e618c33f832b70ec80caa30303e6c254a0c851b5af78",
+      "matches_signed_index": true,
+      "suite": "trixie"
+    },
+    {
+      "name": "ttyd",
+      "version": "1.7.7-7",
+      "source": "https://deb.debian.org/debian/pool/main/t/ttyd/ttyd_1.7.7-7_amd64.deb",
+      "sha256": "c0b7bc6fa9fcd4f4499f15062bf141437e5494554f399966e458b0a046262eec",
+      "matches_signed_index": true,
+      "suite": "sid"
+    },
+    {
+      "name": "libuv1t64",
+      "version": "1.50.0-2",
+      "source": "https://deb.debian.org/debian/pool/main/libu/libuv1/libuv1t64_1.50.0-2_amd64.deb",
+      "sha256": "5fec8035002e0c745b64d1c5b3e1dc42790d1a77574315b976cf3e4aab9ddc0a",
+      "matches_signed_index": true,
+      "suite": "trixie"
+    },
+    {
+      "name": "libwebsockets19t64",
+      "version": "4.3.5-1+deb13u2",
+      "source": "https://deb.debian.org/debian/pool/main/libw/libwebsockets/libwebsockets19t64_4.3.5-1+deb13u2_amd64.deb",
+      "sha256": "d518b148939adffa78e60c6a6129150b81643ee89d8948d19f8ac71e0f3c8553",
+      "matches_signed_index": true,
+      "suite": "trixie"
+    },
+    {
+      "name": "libwebsockets-evlib-uv",
+      "version": "4.3.5-1+deb13u2",
+      "source": "https://deb.debian.org/debian/pool/main/libw/libwebsockets/libwebsockets-evlib-uv_4.3.5-1+deb13u2_amd64.deb",
+      "sha256": "98ff0343450be9855b0e10d6f7279c47e438d7cbaccfcdecb4db6269826790c8",
+      "matches_signed_index": true,
+      "suite": "trixie"
+    }
+  ],
+  "checks": {
+    "debian_signed_indexes": "PASS",
+    "package_sha256_rechecked": "PASS",
+    "executables_load": "PASS",
+    "tmux_socket_creation": "FAIL: Operation not permitted",
+    "same_command_approved_execution_retry": "FAIL: Operation not permitted",
+    "viewer_rendering": "NOT_RUN",
+    "viewer_input_rejection": "NOT_RUN",
+    "resize_isolation": "NOT_RUN",
+    "agent_control": "NOT_RUN",
+    "disconnect_survival": "NOT_RUN",
+    "inline_mcp_apps": "NOT_RUN"
+  },
+  "effects": {
+    "global_system_changes": false,
+    "server_started": false,
+    "active_listener": false,
+    "public_exposure": false,
+    "residual_owned_runtime_processes": false
+  },
+  "limits": [
+    "No active URL or terminal delivered",
+    "No causal diagnosis of the socket restriction established",
+    "No alternative socket path or custom terminal implementation attempted",
+    "Package authenticity and loadability do not establish application safety or end-to-end correctness"
+  ]
+}
