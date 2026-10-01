@@ -58,3 +58,7 @@ The verified GitHub research and project comparison are in [`docs/research/acp-l
 ## Status
 
 Research and architecture definition. Implementation begins with a minimal, locally verifiable LiteLLM deployment.
+
+## Orchestration requirements
+
+The [orchestration blueprint](docs/orchestration/README.md) adds public requirements, isolated-node collaboration principles and a planning register. It is documentation, not a deployed runtime or proof of operational acceptance.

@@ -1,0 +1,1228 @@
+{
+  "schema_version": "1.0",
+  "kind": "public_planning_blueprint_not_runtime",
+  "publication_status": "prepared_for_existing_public_repository_not_published",
+  "deployment_status": "not_claimed",
+  "license_status": "not_assigned",
+  "tasks": [
+    {
+      "id": "R01",
+      "title": "Versionner la spécification",
+      "priority": "P0",
+      "status": "a_evaluer",
+      "owner_role_proposed": "coordination livraison",
+      "executor": null,
+      "dependencies": [],
+      "next_action": "Inventorier les documents et travaux équivalents",
+      "acceptance": "Document versionné, relu, accessible et sans duplication inutile",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R01.1",
+          "description": "Inventorier les documents et travaux équivalents",
+          "status": "a_evaluer",
+          "owner_ref": "R01",
+          "acceptance_ref": "R01",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R01.2",
+          "description": "Définir une branche documentaire et une revue",
+          "status": "a_evaluer",
+          "owner_ref": "R01",
+          "acceptance_ref": "R01",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R01.3",
+          "description": "Publier seulement les données autorisées",
+          "status": "a_evaluer",
+          "owner_ref": "R01",
+          "acceptance_ref": "R01",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R01.4",
+          "description": "Relire le contenu publié et vérifier les liens",
+          "status": "a_evaluer",
+          "owner_ref": "R01",
+          "acceptance_ref": "R01",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "title": "Maintenir les exigences",
+      "priority": "P0",
+      "status": "a_evaluer",
+      "owner_role_proposed": "analyse des exigences",
+      "executor": null,
+      "dependencies": [
+        "R01"
+      ],
+      "next_action": "Associer chaque besoin à un résultat observable",
+      "acceptance": "Chaque demande retenue possède une tâche, un état et un critère explicite",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R02.1",
+          "description": "Associer chaque besoin à un résultat observable",
+          "status": "a_evaluer",
+          "owner_ref": "R02",
+          "acceptance_ref": "R02",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R02.2",
+          "description": "Distinguer exigences, exemples et hypothèses",
+          "status": "a_evaluer",
+          "owner_ref": "R02",
+          "acceptance_ref": "R02",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R02.3",
+          "description": "Réconcilier les corrections les plus récentes",
+          "status": "a_evaluer",
+          "owner_ref": "R02",
+          "acceptance_ref": "R02",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R02.4",
+          "description": "Faire contrôler la couverture indépendamment",
+          "status": "a_evaluer",
+          "owner_ref": "R02",
+          "acceptance_ref": "R02",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "title": "Auditer les adaptations",
+      "priority": "P0",
+      "status": "a_evaluer",
+      "owner_role_proposed": "qualité",
+      "executor": null,
+      "dependencies": [
+        "R02"
+      ],
+      "next_action": "Inventorier les scripts et adaptations proposés",
+      "acceptance": "Aucune adaptation redondante ou contradiction connue laissée sans décision documentée",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R03.1",
+          "description": "Inventorier les scripts et adaptations proposés",
+          "status": "a_evaluer",
+          "owner_ref": "R03",
+          "acceptance_ref": "R03",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R03.2",
+          "description": "Comparer aux fonctions déjà disponibles",
+          "status": "a_evaluer",
+          "owner_ref": "R03",
+          "acceptance_ref": "R03",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R03.3",
+          "description": "Vérifier paramètres, modèle choisi et périmètre hérité",
+          "status": "a_evaluer",
+          "owner_ref": "R03",
+          "acceptance_ref": "R03",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R03.4",
+          "description": "Détecter les instructions contradictoires avant admission",
+          "status": "a_evaluer",
+          "owner_ref": "R03",
+          "acceptance_ref": "R03",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R03.5",
+          "description": "Proposer conservation ou remplacement avec retour arrière",
+          "status": "a_evaluer",
+          "owner_ref": "R03",
+          "acceptance_ref": "R03",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "title": "Vérifier les accès effectifs",
+      "priority": "P0",
+      "status": "a_evaluer",
+      "owner_role_proposed": "environnement",
+      "executor": null,
+      "dependencies": [
+        "R03"
+      ],
+      "next_action": "Identifier la cible et le contexte courant",
+      "acceptance": "Action ciblée permise et vérifiée, ou dépendance précise documentée sans contournement",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R04.1",
+          "description": "Identifier la cible et le contexte courant",
+          "status": "a_evaluer",
+          "owner_ref": "R04",
+          "acceptance_ref": "R04",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R04.2",
+          "description": "Vérifier les capacités par opérations permises",
+          "status": "a_evaluer",
+          "owner_ref": "R04",
+          "acceptance_ref": "R04",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R04.3",
+          "description": "Comparer configuration déclarée et restrictions effectives",
+          "status": "a_evaluer",
+          "owner_ref": "R04",
+          "acceptance_ref": "R04",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R04.4",
+          "description": "Identifier le parcours officiel de résolution si nécessaire",
+          "status": "a_evaluer",
+          "owner_ref": "R04",
+          "acceptance_ref": "R04",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R05",
+      "title": "Superviser les actions visuellement",
+      "priority": "P0",
+      "status": "a_evaluer",
+      "owner_role_proposed": "vision et qualité",
+      "executor": null,
+      "dependencies": [
+        "R04"
+      ],
+      "next_action": "Observer l’état actuel avant une action graphique",
+      "acceptance": "Preuves avant/action/après pour le scénario testé, avec limites explicites",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R05.1",
+          "description": "Observer l’état actuel avant une action graphique",
+          "status": "a_evaluer",
+          "owner_ref": "R05",
+          "acceptance_ref": "R05",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R05.2",
+          "description": "Contrôler la cible et le résultat après action",
+          "status": "a_evaluer",
+          "owner_ref": "R05",
+          "acceptance_ref": "R05",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R05.3",
+          "description": "Corréler captures autorisées et journaux",
+          "status": "a_evaluer",
+          "owner_ref": "R05",
+          "acceptance_ref": "R05",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R05.4",
+          "description": "Distinguer capture ponctuelle et observation continue",
+          "status": "a_evaluer",
+          "owner_ref": "R05",
+          "acceptance_ref": "R05",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R06",
+      "title": "Vérifier les connaissances",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "connaissances",
+      "executor": null,
+      "dependencies": [
+        "R01",
+        "R03"
+      ],
+      "next_action": "Inventorier les stockages et index utiles",
+      "acceptance": "Réponses reproductibles avec provenance, fraîcheur et couverture documentées",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R06.1",
+          "description": "Inventorier les stockages et index utiles",
+          "status": "a_evaluer",
+          "owner_ref": "R06",
+          "acceptance_ref": "R06",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R06.2",
+          "description": "Vérifier couverture, versions et fraîcheur",
+          "status": "a_evaluer",
+          "owner_ref": "R06",
+          "acceptance_ref": "R06",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R06.3",
+          "description": "Tester une recherche connue et une recherche sans réponse",
+          "status": "a_evaluer",
+          "owner_ref": "R06",
+          "acceptance_ref": "R06",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R06.4",
+          "description": "Relier les résultats aux sources",
+          "status": "a_evaluer",
+          "owner_ref": "R06",
+          "acceptance_ref": "R06",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R06.5",
+          "description": "Définir exclusions et mise à jour",
+          "status": "a_evaluer",
+          "owner_ref": "R06",
+          "acceptance_ref": "R06",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R07",
+      "title": "Comparer les outils de décision",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "recherche et qualité",
+      "executor": null,
+      "dependencies": [
+        "R06"
+      ],
+      "next_action": "Comparer outils de raisonnement et fonctionnalités existantes",
+      "acceptance": "Choix fondé sur un besoin mesurable ; aucun journal textuel assimilé à une garantie de vérité",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R07.1",
+          "description": "Comparer outils de raisonnement et fonctionnalités existantes",
+          "status": "a_evaluer",
+          "owner_ref": "R07",
+          "acceptance_ref": "R07",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R07.2",
+          "description": "Vérifier licences, versions, réseau et persistance",
+          "status": "a_evaluer",
+          "owner_ref": "R07",
+          "acceptance_ref": "R07",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R07.3",
+          "description": "Tester les validations dans un environnement isolé",
+          "status": "a_evaluer",
+          "owner_ref": "R07",
+          "acceptance_ref": "R07",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R07.4",
+          "description": "Utiliser Python pour les décisions quantitatives pertinentes",
+          "status": "a_evaluer",
+          "owner_ref": "R07",
+          "acceptance_ref": "R07",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R07.5",
+          "description": "Publier hypothèses et analyse de sensibilité",
+          "status": "a_evaluer",
+          "owner_ref": "R07",
+          "acceptance_ref": "R07",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R08",
+      "title": "Choisir une plateforme existante",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "architecture",
+      "executor": null,
+      "dependencies": [
+        "R03",
+        "R07"
+      ],
+      "next_action": "Inventorier les plateformes et interfaces disponibles",
+      "acceptance": "Solution minimale retenue après essai documenté, sans nouveau moteur par défaut",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R08.1",
+          "description": "Inventorier les plateformes et interfaces disponibles",
+          "status": "a_evaluer",
+          "owner_ref": "R08",
+          "acceptance_ref": "R08",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R08.2",
+          "description": "Lire exemples officiels et versions supportées",
+          "status": "a_evaluer",
+          "owner_ref": "R08",
+          "acceptance_ref": "R08",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R08.3",
+          "description": "Tester un scénario commun de délégation et revue",
+          "status": "a_evaluer",
+          "owner_ref": "R08",
+          "acceptance_ref": "R08",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R08.4",
+          "description": "Comparer complexité, coût, fiabilité et réversibilité",
+          "status": "a_evaluer",
+          "owner_ref": "R08",
+          "acceptance_ref": "R08",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R09",
+      "title": "Connecter les nœuds isolés",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "coordination livraison",
+      "executor": null,
+      "dependencies": [
+        "R08"
+      ],
+      "next_action": "Définir rôles, entrées et sorties",
+      "acceptance": "Échange réel entre nœuds, résultat traçable et absence de collision d’écriture",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R09.1",
+          "description": "Définir rôles, entrées et sorties",
+          "status": "a_evaluer",
+          "owner_ref": "R09",
+          "acceptance_ref": "R09",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R09.2",
+          "description": "Isoler dossiers, runtimes et responsabilités d’écriture",
+          "status": "a_evaluer",
+          "owner_ref": "R09",
+          "acceptance_ref": "R09",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R09.3",
+          "description": "Établir communication et escalades entre IA",
+          "status": "a_evaluer",
+          "owner_ref": "R09",
+          "acceptance_ref": "R09",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R09.4",
+          "description": "Coordonner les réparations ciblées entre environnements",
+          "status": "a_evaluer",
+          "owner_ref": "R09",
+          "acceptance_ref": "R09",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R09.5",
+          "description": "Tester conflits et pertes de connexion",
+          "status": "a_evaluer",
+          "owner_ref": "R09",
+          "acceptance_ref": "R09",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "title": "Relier événements et qualité",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "qualité",
+      "executor": null,
+      "dependencies": [
+        "R09"
+      ],
+      "next_action": "Réutiliser les vérificateurs existants",
+      "acceptance": "Échec visible puis correction vérifiée, aucune réussite inventée et reprise traçable",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R10.1",
+          "description": "Réutiliser les vérificateurs existants",
+          "status": "a_evaluer",
+          "owner_ref": "R10",
+          "acceptance_ref": "R10",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R10.2",
+          "description": "Relier lancement, erreur, correction et revue aux états",
+          "status": "a_evaluer",
+          "owner_ref": "R10",
+          "acceptance_ref": "R10",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R10.3",
+          "description": "Tester échec réel et absence de contrôle",
+          "status": "a_evaluer",
+          "owner_ref": "R10",
+          "acceptance_ref": "R10",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R10.4",
+          "description": "Définir reprise bornée et prévention des boucles",
+          "status": "a_evaluer",
+          "owner_ref": "R10",
+          "acceptance_ref": "R10",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R10.5",
+          "description": "Faire relire les affirmations de réussite",
+          "status": "a_evaluer",
+          "owner_ref": "R10",
+          "acceptance_ref": "R10",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R11",
+      "title": "Évaluer les modèles et runtimes",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "environnement",
+      "executor": null,
+      "dependencies": [
+        "R04"
+      ],
+      "next_action": "Vérifier versions et capacités réellement exposées",
+      "acceptance": "Capacités testées sur leur cible ; limites et coûts observés clairement associés",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R11.1",
+          "description": "Vérifier versions et capacités réellement exposées",
+          "status": "a_evaluer",
+          "owner_ref": "R11",
+          "acceptance_ref": "R11",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R11.2",
+          "description": "Identifier modèles locaux et cloud adaptés",
+          "status": "a_evaluer",
+          "owner_ref": "R11",
+          "acceptance_ref": "R11",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R11.3",
+          "description": "Mesurer qualité, latence et consommation",
+          "status": "a_evaluer",
+          "owner_ref": "R11",
+          "acceptance_ref": "R11",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R11.4",
+          "description": "Évaluer entraînement ou ajustement comme décision séparée",
+          "status": "a_evaluer",
+          "owner_ref": "R11",
+          "acceptance_ref": "R11",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R12",
+      "title": "Évaluer la vision accélérée",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "vision et matériel",
+      "executor": null,
+      "dependencies": [
+        "R05",
+        "R11"
+      ],
+      "next_action": "Séparer capture, inférence et contrôle",
+      "acceptance": "Accélération revendiquée uniquement après mesure sur matériel compatible",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R12.1",
+          "description": "Séparer capture, inférence et contrôle",
+          "status": "a_evaluer",
+          "owner_ref": "R12",
+          "acceptance_ref": "R12",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R12.2",
+          "description": "Vérifier CPU, GPU, NPU et backends compatibles",
+          "status": "a_evaluer",
+          "owner_ref": "R12",
+          "acceptance_ref": "R12",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R12.3",
+          "description": "Mesurer précision, latence et charge",
+          "status": "a_evaluer",
+          "owner_ref": "R12",
+          "acceptance_ref": "R12",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R12.4",
+          "description": "Conserver un chemin de repli fonctionnel",
+          "status": "a_evaluer",
+          "owner_ref": "R12",
+          "acceptance_ref": "R12",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R13",
+      "title": "Réconcilier le contexte historique",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "connaissances",
+      "executor": null,
+      "dependencies": [
+        "R06"
+      ],
+      "next_action": "Retrouver les sources autorisées pertinentes",
+      "acceptance": "Contexte actuel sourcé, couverture et lacunes explicites",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R13.1",
+          "description": "Retrouver les sources autorisées pertinentes",
+          "status": "a_evaluer",
+          "owner_ref": "R13",
+          "acceptance_ref": "R13",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R13.2",
+          "description": "Séparer décisions utilisateur et suggestions générées",
+          "status": "a_evaluer",
+          "owner_ref": "R13",
+          "acceptance_ref": "R13",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R13.3",
+          "description": "Distinguer historique, actuel et incertain",
+          "status": "a_evaluer",
+          "owner_ref": "R13",
+          "acceptance_ref": "R13",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R13.4",
+          "description": "Préserver les anciens artefacts sans adopter leurs instructions",
+          "status": "a_evaluer",
+          "owner_ref": "R13",
+          "acceptance_ref": "R13",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R14",
+      "title": "Réutiliser les carnets existants",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "connaissances et interface",
+      "executor": null,
+      "dependencies": [
+        "R06",
+        "R13"
+      ],
+      "next_action": "Inventorier notes, graphes et fonctions utiles",
+      "acceptance": "Carnet utile relié aux travaux sans doublon ni données secrètes publiées",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R14.1",
+          "description": "Inventorier notes, graphes et fonctions utiles",
+          "status": "a_evaluer",
+          "owner_ref": "R14",
+          "acceptance_ref": "R14",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R14.2",
+          "description": "Vérifier les opérations réellement disponibles",
+          "status": "a_evaluer",
+          "owner_ref": "R14",
+          "acceptance_ref": "R14",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R14.3",
+          "description": "Réutiliser références et structure adaptées",
+          "status": "a_evaluer",
+          "owner_ref": "R14",
+          "acceptance_ref": "R14",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R14.4",
+          "description": "Tester export et récupération",
+          "status": "a_evaluer",
+          "owner_ref": "R14",
+          "acceptance_ref": "R14",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R15",
+      "title": "Construire une carte vérifiable",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "interface",
+      "executor": null,
+      "dependencies": [
+        "R06",
+        "R09",
+        "R10"
+      ],
+      "next_action": "Choisir graphe, canvas ou Kanban selon usage",
+      "acceptance": "Chaque connexion possède une preuve ou est explicitement proposée ; aucune fausse indication live",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R15.1",
+          "description": "Choisir graphe, canvas ou Kanban selon usage",
+          "status": "a_evaluer",
+          "owner_ref": "R15",
+          "acceptance_ref": "R15",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R15.2",
+          "description": "Afficher composants, connexions et dépendances",
+          "status": "a_evaluer",
+          "owner_ref": "R15",
+          "acceptance_ref": "R15",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R15.3",
+          "description": "Brancher les états aux événements observés",
+          "status": "a_evaluer",
+          "owner_ref": "R15",
+          "acceptance_ref": "R15",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R15.4",
+          "description": "Marquer données périmées, inconnues ou déconnectées",
+          "status": "a_evaluer",
+          "owner_ref": "R15",
+          "acceptance_ref": "R15",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R15.5",
+          "description": "Tester lisibilité, accessibilité et interactions",
+          "status": "a_evaluer",
+          "owner_ref": "R15",
+          "acceptance_ref": "R15",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R16",
+      "title": "Présenter un terminal lecture seule",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "interface et sécurité",
+      "executor": null,
+      "dependencies": [
+        "R08",
+        "R10"
+      ],
+      "next_action": "Comparer composants de terminal maintenus",
+      "acceptance": "Flux réel privé et lecture seule dans la surface retenue, sans confondre image et terminal",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R16.1",
+          "description": "Comparer composants de terminal maintenus",
+          "status": "a_evaluer",
+          "owner_ref": "R16",
+          "acceptance_ref": "R16",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R16.2",
+          "description": "Vérifier transport et intégration réellement supportés",
+          "status": "a_evaluer",
+          "owner_ref": "R16",
+          "acceptance_ref": "R16",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R16.3",
+          "description": "Contrôler authentification et exposition réseau",
+          "status": "a_evaluer",
+          "owner_ref": "R16",
+          "acceptance_ref": "R16",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R16.4",
+          "description": "Tester refus des entrées et reconnexion",
+          "status": "a_evaluer",
+          "owner_ref": "R16",
+          "acceptance_ref": "R16",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R16.5",
+          "description": "Relier un flux réel à la vue",
+          "status": "a_evaluer",
+          "owner_ref": "R16",
+          "acceptance_ref": "R16",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R17",
+      "title": "Comparer dix extraits vocaux",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "voix",
+      "executor": null,
+      "dependencies": [
+        "R04",
+        "R11"
+      ],
+      "next_action": "Vérifier capacités, droits et budget disponibles",
+      "acceptance": "Dix fichiers réellement écoutables, texte comparable et paramètres explicites ; aucun extrait annoncé avant production",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R17.1",
+          "description": "Vérifier capacités, droits et budget disponibles",
+          "status": "a_evaluer",
+          "owner_ref": "R17",
+          "acceptance_ref": "R17",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R17.2",
+          "description": "Comparer voix officielles, création adaptée et options locales",
+          "status": "a_evaluer",
+          "owner_ref": "R17",
+          "acceptance_ref": "R17",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R17.3",
+          "description": "Lire paramètres de prosodie, vitesse et langues",
+          "status": "a_evaluer",
+          "owner_ref": "R17",
+          "acceptance_ref": "R17",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R17.4",
+          "description": "Définir un texte fixe et dix débits identifiés",
+          "status": "a_evaluer",
+          "owner_ref": "R17",
+          "acceptance_ref": "R17",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R17.5",
+          "description": "Produire puis contrôler dix fichiers audio",
+          "status": "a_evaluer",
+          "owner_ref": "R17",
+          "acceptance_ref": "R17",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R17.6",
+          "description": "Livrer les extraits et recueillir le choix",
+          "status": "a_evaluer",
+          "owner_ref": "R17",
+          "acceptance_ref": "R17",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R18",
+      "title": "Valider la conversation vocale",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "interface voix",
+      "executor": null,
+      "dependencies": [
+        "R17"
+      ],
+      "next_action": "Vérifier interruption et reprise de parole",
+      "acceptance": "Échange accepté à l’écoute, sans parler au-dessus de l’utilisateur ni supposer une intégration de moteur",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R18.1",
+          "description": "Vérifier interruption et reprise de parole",
+          "status": "a_evaluer",
+          "owner_ref": "R18",
+          "acceptance_ref": "R18",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R18.2",
+          "description": "Stabiliser cadence et chaleur",
+          "status": "a_evaluer",
+          "owner_ref": "R18",
+          "acceptance_ref": "R18",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R18.3",
+          "description": "Évaluer variantes régionales sans caricature",
+          "status": "a_evaluer",
+          "owner_ref": "R18",
+          "acceptance_ref": "R18",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R18.4",
+          "description": "Distinguer réglages exposés et rendu réellement observé",
+          "status": "a_evaluer",
+          "owner_ref": "R18",
+          "acceptance_ref": "R18",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R19",
+      "title": "Valider les applications clientes",
+      "priority": "P1",
+      "status": "a_evaluer",
+      "owner_role_proposed": "environnement et qualité",
+      "executor": null,
+      "dependencies": [
+        "R04",
+        "R05"
+      ],
+      "next_action": "Distinguer lancement, authentification, outils et usage",
+      "acceptance": "Application utilisable sur un scénario réel, cause et limites documentées",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R19.1",
+          "description": "Distinguer lancement, authentification, outils et usage",
+          "status": "a_evaluer",
+          "owner_ref": "R19",
+          "acceptance_ref": "R19",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R19.2",
+          "description": "Contrôler version, processus et fenêtre utilisable",
+          "status": "a_evaluer",
+          "owner_ref": "R19",
+          "acceptance_ref": "R19",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R19.3",
+          "description": "Comparer traces actuelles et historiques",
+          "status": "a_evaluer",
+          "owner_ref": "R19",
+          "acceptance_ref": "R19",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R19.4",
+          "description": "Exécuter une tâche fonctionnelle représentative",
+          "status": "a_evaluer",
+          "owner_ref": "R19",
+          "acceptance_ref": "R19",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R19.5",
+          "description": "Vérifier la correction sans désactiver les protections",
+          "status": "a_evaluer",
+          "owner_ref": "R19",
+          "acceptance_ref": "R19",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R20",
+      "title": "Protéger données et accès",
+      "priority": "P0",
+      "status": "a_evaluer",
+      "owner_role_proposed": "sécurité",
+      "executor": null,
+      "dependencies": [],
+      "next_action": "Minimiser les données nécessaires à chaque nœud",
+      "acceptance": "Aucun secret ou donnée privée non autorisée dans la publication ; accès proportionnés au besoin",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R20.1",
+          "description": "Minimiser les données nécessaires à chaque nœud",
+          "status": "a_evaluer",
+          "owner_ref": "R20",
+          "acceptance_ref": "R20",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R20.2",
+          "description": "Conserver secrets hors du dépôt et des preuves publiques",
+          "status": "a_evaluer",
+          "owner_ref": "R20",
+          "acceptance_ref": "R20",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R20.3",
+          "description": "Réutiliser les parcours sécurisés existants",
+          "status": "a_evaluer",
+          "owner_ref": "R20",
+          "acceptance_ref": "R20",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R20.4",
+          "description": "Revoir autorisations persistantes et effets de bord",
+          "status": "a_evaluer",
+          "owner_ref": "R20",
+          "acceptance_ref": "R20",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R20.5",
+          "description": "Expurger les preuves avant publication",
+          "status": "a_evaluer",
+          "owner_ref": "R20",
+          "acceptance_ref": "R20",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "R21",
+      "title": "Mesurer la valeur livrée",
+      "priority": "P2",
+      "status": "a_evaluer",
+      "owner_role_proposed": "coordination livraison",
+      "executor": null,
+      "dependencies": [
+        "R08",
+        "R09",
+        "R10"
+      ],
+      "next_action": "Choisir un cas utile et une référence de départ",
+      "acceptance": "Livrable utilisable et mesures observées, sans promesse de performance non testée",
+      "evidence": null,
+      "last_verified_at": null,
+      "subtasks": [
+        {
+          "id": "R21.1",
+          "description": "Choisir un cas utile et une référence de départ",
+          "status": "a_evaluer",
+          "owner_ref": "R21",
+          "acceptance_ref": "R21",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R21.2",
+          "description": "Exécuter, contrôler et livrer de bout en bout",
+          "status": "a_evaluer",
+          "owner_ref": "R21",
+          "acceptance_ref": "R21",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R21.3",
+          "description": "Mesurer temps humain, reprises, qualité et coût",
+          "status": "a_evaluer",
+          "owner_ref": "R21",
+          "acceptance_ref": "R21",
+          "executor": null,
+          "evidence": null
+        },
+        {
+          "id": "R21.4",
+          "description": "Décider de l’extension à partir des résultats",
+          "status": "a_evaluer",
+          "owner_ref": "R21",
+          "acceptance_ref": "R21",
+          "executor": null,
+          "evidence": null
+        }
+      ]
+    }
+  ]
+}
