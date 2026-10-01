@@ -23,6 +23,8 @@ La priorité est de réutiliser une solution maintenue plutôt que créer un nou
 - [Carte des connexions : preuve limitée et cible proposée](architecture-map.md)
 - [Terminal live : composant existant et critères de lecture seule](terminal-reuse.md)
 
+- [Démonstration cloud : composants installés, tests et limites](../../examples/cloud-agent-demo/README.md)
+
 ## Méthode
 
 1. Comprendre le résultat attendu et rechercher un équivalent existant

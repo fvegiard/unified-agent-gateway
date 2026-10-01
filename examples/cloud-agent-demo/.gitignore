@@ -1,0 +1,14 @@
+**/node_modules/
+**/.venv/
+**/__pycache__/
+**/runtime/
+**/home/
+**/codex-home/
+**/.env
+**/.env.*
+**/auth.json
+**/*.stdout.jsonl
+**/*.stderr.txt
+**/*.transcript.json
+**/empty-workspace/
+**/logs/

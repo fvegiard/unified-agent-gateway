@@ -1,0 +1,319 @@
+{
+  "status": "FAIL",
+  "passed": 25,
+  "failed": 1,
+  "checks": [
+    {
+      "name": "initialize and six real tools",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "weighted_sum against independent rational oracle",
+      "status": "PASS",
+      "detail": {
+        "A": "3/4",
+        "B": "1/2",
+        "C": "1/4"
+      }
+    },
+    {
+      "name": "byte-equivalent result repeated 3 times",
+      "status": "PASS",
+      "detail": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "name": "relative weight scaling preserves rank and exact scores",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "one zero weight allowed and ignored in scoring",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "negative weight rejected",
+      "status": "PASS",
+      "detail": {
+        "type": "invalid_weight",
+        "message": "Criterion 'Quality' has a negative weight (-1).",
+        "hint": "Weights must be zero or positive. Relative size is what matters (e.g. 1,2,3)."
+      }
+    },
+    {
+      "name": "all zero weights rejected",
+      "status": "PASS",
+      "detail": {
+        "type": "invalid_weight",
+        "message": "At least one criterion must have a weight greater than 0.",
+        "hint": "Give your most important criteria larger weights."
+      }
+    },
+    {
+      "name": "incomplete matrix rejected",
+      "status": "PASS",
+      "detail": {
+        "type": "incomplete_scores",
+        "message": "Missing 1 score(s) in the options x criteria matrix.",
+        "hint": "Provide a score for every option and criterion. Missing: B / Cost."
+      }
+    },
+    {
+      "name": "matrix wrong top-level type rejected",
+      "status": "PASS",
+      "detail": {
+        "type": "invalid_scores",
+        "message": "'scores' must be an object map {option:{criterion:value}} or an array of {option, scores}.",
+        "hint": "Object form: {\"Vendor A\":{\"Price\":100,\"Quality\":8}}."
+      }
+    },
+    {
+      "name": "explicit unknown option row rejected",
+      "status": "PASS",
+      "detail": {
+        "type": "unknown_option",
+        "message": "scores[0] refers to unknown option 'Z'.",
+        "hint": "Known options: A, B, C."
+      }
+    },
+    {
+      "name": "non-finite or absent score rejected: NaN",
+      "status": "PASS",
+      "detail": {
+        "type": "invalid_input",
+        "message": "'scores['A']['Quality']' is not a valid number: \"NaN\".",
+        "hint": "Pass a finite numeric value, e.g. 7, 250, or 0.9."
+      }
+    },
+    {
+      "name": "non-finite or absent score rejected: Infinity",
+      "status": "PASS",
+      "detail": {
+        "type": "invalid_input",
+        "message": "'scores['A']['Quality']' is not a valid number: \"Infinity\".",
+        "hint": "Pass a finite numeric value, e.g. 7, 250, or 0.9."
+      }
+    },
+    {
+      "name": "non-finite or absent score rejected: -Infinity",
+      "status": "PASS",
+      "detail": {
+        "type": "invalid_input",
+        "message": "'scores['A']['Quality']' is not a valid number: \"-Infinity\".",
+        "hint": "Pass a finite numeric value, e.g. 7, 250, or 0.9."
+      }
+    },
+    {
+      "name": "non-finite or absent score rejected: None",
+      "status": "PASS",
+      "detail": {
+        "type": "missing_parameter",
+        "message": "'scores['A']['Quality']' is required and must be a number.",
+        "hint": "Provide a numeric value for 'scores['A']['Quality']'."
+      }
+    },
+    {
+      "name": "non-finite weight rejected",
+      "status": "PASS",
+      "detail": {
+        "type": "invalid_input",
+        "message": "'criteria['Quality'].weight' is not a valid number: \"Infinity\".",
+        "hint": "Pass a finite numeric value, e.g. 7, 250, or 0.9."
+      }
+    },
+    {
+      "name": "duplicate alternatives rejected",
+      "status": "PASS",
+      "detail": {
+        "type": "duplicate_option",
+        "message": "Duplicate option name 'A'.",
+        "hint": "Option names must be unique so results can be referenced unambiguously."
+      }
+    },
+    {
+      "name": "unknown method rejected",
+      "status": "PASS",
+      "detail": {
+        "type": "unknown_method",
+        "message": "Unknown method 'nonexistent'.",
+        "hint": "Supported methods: weighted_sum, weighted_product, topsis. Call list_methods for details."
+      }
+    },
+    {
+      "name": "unknown tool returns protocol -32602",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "score_options agrees with create_decision",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "list_methods and health_check callable",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sensitivity robust for clear weighted_sum winner",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "compare_two weighted_sum checks direction and wins",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "weighted_product simple independent oracle",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "TOPSIS one benefit independent oracle",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "TOPSIS cost rank respects minimize direction",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "TOPSIS compare_two cost explanation agrees with rank",
+      "status": "FAIL",
+      "error": "Expected ('B', 'B', {'A': 0, 'B': 1}), received ('B', 'A', {'A': 1, 'B': 0})"
+    }
+  ],
+  "observations": {
+    "package_version": "1.0.2",
+    "reported_server_info": {
+      "name": "DecisionMatrix",
+      "version": "1.0.0"
+    },
+    "health_check": {
+      "status": "ok",
+      "server": "DecisionMatrix",
+      "version": "1.0.0-edge",
+      "precision": "decimal.js (40 significant digits)",
+      "deterministic": true,
+      "stateless": true,
+      "tools": [
+        "create_decision",
+        "score_options",
+        "sensitivity_analysis",
+        "compare_two",
+        "list_methods",
+        "health_check"
+      ],
+      "methods": [
+        "weighted_sum",
+        "weighted_product",
+        "topsis"
+      ],
+      "runtime": "cloudflare-pages-functions"
+    },
+    "extra_object_map_options_and_criteria_ignored": true,
+    "topis_compare_two_cost_observed": {
+      "status": "success",
+      "method": "topsis",
+      "winner": "B",
+      "tie": false,
+      "margin": 1,
+      "scores": {
+        "A": 0,
+        "B": 1
+      },
+      "criteria_wins": {
+        "A": 1,
+        "B": 0
+      },
+      "per_criterion": [
+        {
+          "criterion": "Quality",
+          "direction": "cost",
+          "weight": 1,
+          "A_raw": "4",
+          "B_raw": "2",
+          "A_normalized": 0.894427,
+          "B_normalized": 0.447214,
+          "favours": "A"
+        }
+      ],
+      "breakdown": [
+        {
+          "rank": 1,
+          "option": "B",
+          "score": 1,
+          "score_exact": "1",
+          "breakdown": [
+            {
+              "criterion": "Quality",
+              "direction": "cost",
+              "weight": 1,
+              "weight_raw": "1",
+              "raw_score": "2",
+              "normalized_score": 0.447214,
+              "weighted_contribution": 0.447214
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "option": "A",
+          "score": 0,
+          "score_exact": "0",
+          "breakdown": [
+            {
+              "criterion": "Quality",
+              "direction": "cost",
+              "weight": 1,
+              "weight_raw": "1",
+              "raw_score": "4",
+              "normalized_score": 0.894427,
+              "weighted_contribution": 0.894427
+            }
+          ]
+        }
+      ],
+      "methodology": {
+        "method": "topsis",
+        "name": "TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)",
+        "description": "Vector-normalizes and weights the matrix, then ranks options by their closeness to the ideal solution and distance from the anti-ideal solution.",
+        "normalization": "vector (Euclidean) per criterion",
+        "score_range": "0 to 1 closeness coefficient (higher is better)",
+        "weighting": "Criteria weights are normalized to sum to 1; only their relative sizes matter.",
+        "tie_breaking": "Equal scores share a rank; presentation order falls back to input order.",
+        "deterministic": true
+      },
+      "weights_used": [
+        {
+          "criterion": "Quality",
+          "direction": "cost",
+          "weight_input": "1",
+          "weight_normalized": 1
+        }
+      ],
+      "inputs_used": {
+        "options": [
+          "A",
+          "B"
+        ],
+        "method": "topsis"
+      },
+      "notes": [
+        "'favours' compares the two options' normalized scores on each criterion.",
+        "TOPSIS ranks options by closeness to the ideal solution and distance from the anti-ideal; the score is a 0-1 closeness coefficient.",
+        "For TOPSIS, 'weighted_contribution' is the weighted normalized value v[i][j]; the final closeness score is not a simple sum of these."
+      ],
+      "explanation": "'B' beats 'A' 1 to 0. 'B' wins 0 of 1 criteria head-to-head."
+    },
+    "invalid_nonfinite_values_note": "NaN and Infinity are not valid JSON numbers, so tests submit their string forms through real MCP calls; engine rejects them.",
+    "source_unchanged": true
+  }
+}

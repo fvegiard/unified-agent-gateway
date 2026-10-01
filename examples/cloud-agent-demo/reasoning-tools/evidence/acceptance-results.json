@@ -1,0 +1,17 @@
+{
+  "sequential": {
+    "status": "PASS",
+    "serverInfo": {
+      "name": "sequential-thinking-server",
+      "version": "2026.8.31"
+    },
+    "tool": "sequentialthinking",
+    "checks": [
+      "initialize/version",
+      "tools/list input and output schema required fields/types/minimum",
+      "synthetic tools/call exact result",
+      "invalid thoughtNumber=0 rejected",
+      "invalid request did not mutate history"
+    ]
+  }
+}

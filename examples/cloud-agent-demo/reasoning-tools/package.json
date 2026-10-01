@@ -1,0 +1,1 @@
+{"name":"cloud-agent-reasoning-tools","version":"1.0.0","private":true,"description":"Isolated official MCP reasoning tools and synthetic protocol tests","dependencies":{"@modelcontextprotocol/server-sequential-thinking":"2026.8.31","decisionmatrix-mcp":"1.0.2"}}

@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "sdk_version": "1.50.1",
+  "tools_version": "1.50.1",
+  "conversation_created": true,
+  "registered_child_configuration_created": true,
+  "tool_names": [
+    "task"
+  ],
+  "task_schema_validation": true,
+  "negative_missing_prompt_rejected": true,
+  "network_attempts": [],
+  "network_guard_events": [
+    "socket.__new__:AF_INET/AF_INET6",
+    "socket.bind",
+    "socket.connect",
+    "socket.getaddrinfo",
+    "socket.gethostbyaddr",
+    "socket.gethostbyname",
+    "socket.getnameinfo",
+    "socket.sendmsg",
+    "socket.sendto"
+  ],
+  "runtime_offline_settings": {
+    "LITELLM_LOCAL_MODEL_COST_MAP": "True",
+    "DO_NOT_TRACK": "1",
+    "ANONYMIZED_TELEMETRY": "false",
+    "OPENHANDS_SUPPRESS_BANNER": "1"
+  },
+  "inference_calls": 0,
+  "real_subagent_run": false,
+  "mcp_server_installed": false
+}
