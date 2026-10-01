@@ -1,13 +1,13 @@
 # Carte des connexions d’orchestration
 
-Deux vues **UML-like**, datées du 1er octobre 2026 : un chemin historique limité et une organisation cible. Le format Mermaid est destiné au rendu natif de GitHub ; les équivalents textuels restent lisibles sans moteur de diagrammes. Aucun service, dépendance ou interface supplémentaire n’est créé.
+Deux périmètres **UML-like**, datés du 1er octobre 2026 : un chemin historique limité et une organisation cible, cette dernière présentée en deux petits diagrammes. Le format Mermaid est destiné au rendu natif de GitHub ; les équivalents textuels restent lisibles sans moteur de diagrammes. Aucun service, dépendance ou interface supplémentaire n’est créé.
 
 ## Légende et limites
 
 - **Flèche continue** : relation du test historique rapporté, dans ce seul périmètre
 - **Flèche pointillée** : suite conditionnelle ou relation proposée, jamais une connexion déclarée déployée
 - **Rectangle** : rôle, processus ou donnée ; **losange** : décision ou contrôle préalable
-- **Cadre** : regroupement fonctionnel, sans garantie technique d’isolation
+- **Nœud « Spécialistes »** : regroupement de rôles, sans garantie technique d’isolation
 - Les libellés et les styles de traits portent le sens ; aucune couleur n’est nécessaire
 
 Cette carte n’est ni un inventaire exhaustif d’installation ni une télémétrie en direct. Une preuve historique ne démontre pas la disponibilité actuelle. Les états inconnus restent inconnus.
@@ -41,40 +41,40 @@ Cette synthèse ne joint pas les traces du test et ne vaut pas acceptation publi
 
 ## 2. Organisation cible proposée
 
-**Toutes les connexions ci-dessous sont proposées et pointillées. Aucun déploiement n’est revendiqué.** La vue représente des fonctions, pas une sélection de produits, de transports ou un nombre imposé d’agents. Un cadre de spécialistes peut être réalisé par les seuls exécutants nécessaires au travail.
+**Toutes les connexions ci-dessous sont proposées et pointillées. Aucun déploiement n’est revendiqué.** Les vues représentent des fonctions, pas une sélection de produits, de transports ou un nombre imposé d’agents. Un nœud « Spécialistes » regroupe les seuls rôles nécessaires : recherche, développement, connaissances, interface, vision et voix, chacun dans son environnement dédié.
+
+### 2.1. Responsabilités et livraison
+
+Huit nœuds résument la hiérarchie et ses contrôles. Lorsqu’un accord humain est requis, l’action concernée reste suspendue jusqu’à sa réception ; ce contrôle s’applique avant l’action, pas seulement à la livraison finale.
 
 ```mermaid
 flowchart TD
-    U["Demandes utilisateur : chat ou voix"] -.->|intention et contraintes| C["Coordination principale"]
-    C -.->|résultat attendu et dépendances| D["Fonction livraison"]
-    C -.->|critères et périmètre de contrôle| Q["Fonction qualité indépendante"]
-    C -.->|action nécessitant un accord| H{"Décision humaine, si requise"}
-    U -.->|accord explicite ou refus| H
-    H -.->|réponse consignée| C
+    U["Utilisateur<br/>chat ou voix"] -.->|demande| C["Coordination<br/>principale"]
+    U -.->|accord ou refus| H{"Décision<br/>humaine"}
+    C -.->|plan| D["Livraison"]
+    C -.->|critères| Q["Qualité<br/>indépendante"]
+    H -.->|accord si requis| D
+    D -.->|mission| S["Spécialistes<br/>isolés"]
+    S -.->|résultat et preuves| Q
+    Q -.->|revue| G{"Contrôle<br/>final"}
+    C -.->|périmètre| G
+    G -.->|accepté| L["Résultat<br/>utilisable"]
+```
 
-    subgraph S["Nœuds spécialistes proposés : environnements dédiés"]
-        R["Recherche"]
-        DEV["Développement"]
-        K["Connaissances"]
-        UI["Interface"]
-        VI["Vision"]
-        VO["Voix"]
-    end
+### 2.2. Contexte, événements et reprise
 
-    D -.->|missions et périmètres autorisés| S
-    S -.->|résultats, erreurs et demandes d’aide| D
-    P["Sources autorisées : version, fraîcheur, couverture"] -.->|provenance| K
-    K -.->|contexte sourcé et lacunes| C
-    S -.->|lancement, erreur, correction, fin| E["Hooks et événements observables"]
-    E -.->|état connu, périmé ou déconnecté| C
-    E -.->|traces et absence de contrôle| Q
-    D -.->|livrable et preuves| Q
-    Q -.->|écarts et correction ciblée| D
-    D -.->|échec ou interruption| F["Reprise bornée : limites et arrêt explicites"]
-    F -.->|reprise autorisée ou escalade| C
-    Q -.->|conclusion de revue| G{"Contrôle de livraison / publication"}
-    C -.->|périmètre et autorisations| G
-    G -.->|si critères satisfaits| L["Résultat utilisable pour l’utilisateur"]
+Sept nœuds montrent la boucle de contrôle. Les rôles répétés désignent les mêmes fonctions que dans la vue précédente, sans ajouter de nouveaux agents. Les états périmés ou inconnus et les limites de reprise restent explicites.
+
+```mermaid
+flowchart TD
+    P["Sources<br/>autorisées"] -.->|provenance| K["Connaissances"]
+    K -.->|contexte sourcé| C["Coordination<br/>principale"]
+    C -.->|mission autorisée| S["Spécialistes<br/>isolés"]
+    S -.->|traces| E["Hooks et<br/>événements"]
+    E -.->|état| C
+    E -.->|contrôles| Q["Qualité<br/>indépendante"]
+    Q -.->|écart ou échec| F["Reprise<br/>bornée"]
+    F -.->|reprise ou escalade| C
 ```
 
 **Équivalent textuel des connexions**
@@ -82,7 +82,7 @@ flowchart TD
 - Chat ou voix → coordination principale : intention, contraintes et résultat attendu
 - Coordination → livraison : plan et dépendances ; coordination → qualité : critères de contrôle indépendant
 - Coordination ↔ décision humaine : demander l’accord lorsque requis, conserver la réponse et suspendre l’action dépendante tant que l’accord manque
-- Livraison ↔ spécialistes : missions, résultats, erreurs et demandes d’aide dans des canaux explicites ; les liens au cadre concernent chaque rôle mobilisé
+- Livraison ↔ spécialistes : missions, résultats, erreurs et demandes d’aide dans des canaux explicites ; le nœud regroupé représente chaque rôle mobilisé
 - Sources autorisées → connaissances → coordination : références, versions, fraîcheur, couverture et lacunes
 - Spécialistes → hooks/événements → coordination et qualité : progression observable, erreurs et contrôles réellement effectués
 - Livraison → qualité → livraison : livrable et preuves, puis écarts et corrections ciblées ; la livraison ne s’auto-attribue pas l’acceptation indépendante
